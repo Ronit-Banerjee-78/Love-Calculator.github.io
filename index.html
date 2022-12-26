@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -63,7 +63,8 @@
                     </div>
                 </div>
                 <div class="d-grid gap-2 col-6 mx-auto pt-4">
-                    <button class="btn btn-primary" id="click" type="button">Button</button>
+                    <button class="btn btn-primary" id="click" type="button">CalCulate</button>
+                    <button class="btn btn-primary" id="clear" type="button">Clear Fields</button>
                 </div>
                 <div class="card-body text-center">
                     <h3 id="main-result"></h3>
@@ -82,15 +83,23 @@
     <script>
         // window.onload(alert("You Have To Enter All Input Fields"))
         let varbi = "GOD BLESSED YOUR RELATIONSHIP"
-
+        const firstInput = document.getElementById("input")
+        const secondInput = document.getElementById("inputf")
         let button = document.getElementById("click");
+        let clear = document.getElementById("clear");
         const mainResult = document.getElementById("main-result")
         const mainResultShow = document.getElementById("result-show")
         button.addEventListener("click", () => {
             // Window.onreload(alert("Please Enter Your Names"))
             validate();
         })
+        clear.addEventListener("click", () => {
+            firstInput.value = ""
+            secondInput.value = ""
+            document.getElementById("main-result").innerText = "%"
+            mainResultShow.innerText = ""
 
+        })
 
         function validate() {
 
